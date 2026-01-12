@@ -16,6 +16,22 @@ from lxml import etree
 def generate_uuid():
     return str(uuid.uuid4())
 
+def replace_names_in_dir(dir_path, source_name, target_name):
+    for root, dirs, files in os.walk(dir_path):
+        for file in files:
+            if file.endswith('.xml') or file.endswith('.bsl'):
+                file_path = os.path.join(root, file)
+                try:
+                    with open(file_path, 'r', encoding='utf-8') as f:
+                        content = f.read()
+                    content = content.replace(f".{source_name}", f".{target_name}")
+                    content = content.replace(f">{source_name}<", f">{target_name}<")
+                    with open(file_path, 'w', encoding='utf-8') as f:
+                        f.write(content)
+                    logging.info(f"Обновлён файл: {file_path}")
+                except Exception as e:
+                    logging.warning(f"Не удалось обновить {file_path}: {e}")
+
 def setup_logging(verbose=False):
     level = logging.DEBUG if verbose else logging.INFO
     logging.basicConfig(level=level, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -80,6 +96,15 @@ def clone_catalog_metadata(source_path, target_path, source_name, target_name):
     # Сохранить с правильным форматированием
     tree.write(target_path, encoding="UTF-8", xml_declaration=True, pretty_print=True)
     logging.info(f"Создан файл {target_path}")
+    
+    # Копировать папку справочника, если существует
+    source_dir = os.path.join(os.path.dirname(source_path), source_name)
+    target_dir = os.path.join(os.path.dirname(target_path), target_name)
+    if os.path.exists(source_dir):
+        shutil.copytree(source_dir, target_dir)
+        logging.info(f"Скопирована папка {source_dir} в {target_dir}")
+        # Заменить имена в файлах папки
+        replace_names_in_dir(target_dir, source_name, target_name)
 
 def inject_into_configuration(configuration_xml_path, catalog_name):
     logging.info("Внедрение в Configuration.xml (топологический порядок)")
@@ -149,7 +174,29 @@ def inject_into_config_dump_info(config_dump_info_path, catalog_name):
     new_meta.set("name", f"Catalog.{catalog_name}")
     new_meta.set("id", generate_uuid())
     new_meta.set("configVersion", "0000000000000000000000000000000000000000")
-    
+    # Попытаемся скопировать дочерние Metadata из оригинала (если есть), чтобы избежать дублирующих имён
+    original_meta = None
+    # Примечание: попробуем найти по любому имени Catalog.<source> в корне с дочерними элементами
+    if original_meta is None:
+        # Найдём любой Metadata для Catalog, похожий на исходник по наличию Attribute детей (предпочтительно Предметы)
+        for m in config_versions.findall("Metadata"):
+            if m.get("name") and m.get("name").startswith("Catalog.") and len(list(m)) > 0:
+                original_meta = m
+                break
+    if original_meta is not None:
+        for child in list(original_meta):
+            new_child = etree.Element("{http://v8.1c.ru/8.3/xcf/dumpinfo}Metadata")
+            # Заменяем префикс Catalog.<Old> на Catalog.<New> если присутствует
+            child_name = child.get("name") or ""
+            # Попытка извлечь название каталога из child_name
+            parts = child_name.split('.')
+            if len(parts) >= 2:
+                parts[1] = catalog_name
+            new_name = '.'.join(parts)
+            new_child.set("name", new_name)
+            new_child.set("id", generate_uuid())
+            new_meta.append(new_child)
+
     if last_catalog_meta is not None:
         config_versions.insert(config_versions.index(last_catalog_meta) + 1, new_meta)
         logging.info("Вставлено после последней записи Catalog.*")

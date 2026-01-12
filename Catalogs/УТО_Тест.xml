@@ -1,26 +1,26 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
-	<Catalog uuid="4e84d3a1-dc6e-4cb6-9f40-6d0f0c26ad4f">
+	<Catalog uuid="355ac4aa-e69b-4031-8965-bfce8386f1dc">
 		<InternalInfo>
 			<xr:GeneratedType name="CatalogObject.УТО_Тест" category="Object">
-				<xr:TypeId>33bc1d32-e359-429e-9104-aa8753e9d520</xr:TypeId>
-				<xr:ValueId>9b8a4b88-82f0-40e0-92ea-3f2aca3fcdc7</xr:ValueId>
+				<xr:TypeId>1fe76586-29c3-4146-b140-9233e3fec00c</xr:TypeId>
+				<xr:ValueId>1f1f5e8e-4ba6-425e-b6b9-f058fa6de802</xr:ValueId>
 			</xr:GeneratedType>
 			<xr:GeneratedType name="CatalogRef.УТО_Тест" category="Ref">
-				<xr:TypeId>dc1d000d-1b92-423b-97ab-6103bb1b0f15</xr:TypeId>
-				<xr:ValueId>007c98e6-c6e6-4529-b6b3-fa6f8c3694de</xr:ValueId>
+				<xr:TypeId>407d46b2-12ed-4401-ac88-985aaff28d47</xr:TypeId>
+				<xr:ValueId>eea8d226-c003-4931-a5b2-8055077a42f1</xr:ValueId>
 			</xr:GeneratedType>
 			<xr:GeneratedType name="CatalogSelection.УТО_Тест" category="Selection">
-				<xr:TypeId>a25223d8-0261-4ffd-8d04-7d35e25c3db3</xr:TypeId>
-				<xr:ValueId>036f1a86-647b-4888-b756-4369b7b9dd34</xr:ValueId>
+				<xr:TypeId>78b5959f-80e3-4dd0-95ad-2de0331a7e20</xr:TypeId>
+				<xr:ValueId>e3e94f86-cbda-4d1d-a1b0-5db780bb202e</xr:ValueId>
 			</xr:GeneratedType>
 			<xr:GeneratedType name="CatalogList.УТО_Тест" category="List">
-				<xr:TypeId>492bc91c-fdd0-41f9-8725-a6c38e93a7ad</xr:TypeId>
-				<xr:ValueId>a8de9da5-4e8f-40ff-8919-52b35485d0c7</xr:ValueId>
+				<xr:TypeId>7d84b206-b69e-43d7-9095-95a810fc04b7</xr:TypeId>
+				<xr:ValueId>6b863fd4-7446-44bc-b754-a6d3df8e9bf0</xr:ValueId>
 			</xr:GeneratedType>
 			<xr:GeneratedType name="CatalogManager.УТО_Тест" category="Manager">
-				<xr:TypeId>33bf1d60-0aee-4477-88db-e17820600d54</xr:TypeId>
-				<xr:ValueId>80be6491-84fd-4f3e-ac26-08c381f53f20</xr:ValueId>
+				<xr:TypeId>445b1795-7a10-453d-8074-f5cba1dfc5f2</xr:TypeId>
+				<xr:ValueId>3313200d-0c97-497c-a8a9-51ea65fb1614</xr:ValueId>
 			</xr:GeneratedType>
 		</InternalInfo>
 		<Properties>

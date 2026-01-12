@@ -53,5 +53,5 @@
 		<Metadata name="Report.Успеваемость" id="df806299-09f5-4448-a81b-342a8d6a8eb4" configVersion="012fd4567afacd4091c5907656f1f89200000000"/>
 		<Metadata name="Report.Успеваемость.Template.ОсновнаяСхемаКомпоновкиДанных" id="d997aa8c-e3b5-4331-871a-5b32a31d9657" configVersion="1d76bb69edf4244098d88d8d3a0ed51800000000"/>
 		<Metadata name="Report.Успеваемость.Template.ОсновнаяСхемаКомпоновкиДанных.Template" id="d997aa8c-e3b5-4331-871a-5b32a31d9657.0" configVersion="d3e94e1e5c660d439e19a85ce1b0275c00000000"/>
-	<Metadata name="Catalog.УТО_Тест" id="18ca59a4-64f3-4c25-a05b-cc9a2f0d704f" configVersion="0000000000000000000000000000000000000000"/></ConfigVersions>
+	<Metadata name="Catalog.УТО_Тест" id="18ca59a4-64f3-4c25-a05b-cc9a2f0d704f" configVersion="0000000000000000000000000000000000000000"/><Metadata name="Catalog.УТО_Тест" id="57a18006-3422-468a-b8aa-fe44629474bd" configVersion="0000000000000000000000000000000000000000"/></ConfigVersions>
 </ConfigDumpInfo>
