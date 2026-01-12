@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <ConfigDumpInfo xmlns="http://v8.1c.ru/8.3/xcf/dumpinfo" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" format="Hierarchical" version="2.18">
 	<ConfigVersions>
 		<Metadata name="AccumulationRegister.ПрошедшиеЗанятия" id="3dfc328a-e62a-44af-ae8e-d7efbb497b5a" configVersion="856e0c436765e241b4378442a7859bdc00000000">
@@ -53,5 +53,5 @@
 		<Metadata name="Report.Успеваемость" id="df806299-09f5-4448-a81b-342a8d6a8eb4" configVersion="012fd4567afacd4091c5907656f1f89200000000"/>
 		<Metadata name="Report.Успеваемость.Template.ОсновнаяСхемаКомпоновкиДанных" id="d997aa8c-e3b5-4331-871a-5b32a31d9657" configVersion="1d76bb69edf4244098d88d8d3a0ed51800000000"/>
 		<Metadata name="Report.Успеваемость.Template.ОсновнаяСхемаКомпоновкиДанных.Template" id="d997aa8c-e3b5-4331-871a-5b32a31d9657.0" configVersion="d3e94e1e5c660d439e19a85ce1b0275c00000000"/>
-	</ConfigVersions>
+	<Metadata name="Catalog.УТО_Тест" id="18ca59a4-64f3-4c25-a05b-cc9a2f0d704f" configVersion="0000000000000000000000000000000000000000"/></ConfigVersions>
 </ConfigDumpInfo>
