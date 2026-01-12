@@ -1,0 +1,11 @@
+# IDE-specific files
+.vscode/
+.idea/
+
+# Quilbus files
+.kilocode/
+.qodo/
+
+# Temporary files
+*.log
+*.tmp
